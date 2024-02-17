@@ -19,10 +19,8 @@
         <%= form.text_area :body, class: "text-area" %>
     </div>
     
-    <div>
-        <%= form.button class: "button" %>
+    <div class="button-container">
+        <%= form.submit "Submit", class: "button", style: "float: left; margin-right: 10px;" %>
+        <%= link_to "Back", notes_path, class: "button", style: "float: left;" %>
     </div>
 <% end %>
-
-<%= button_to "Back", @note, method: :get, class: "button" %>
-

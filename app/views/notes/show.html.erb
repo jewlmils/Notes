@@ -1,13 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<div>
-    <div class="show-container">
-        <h2><%= @note.title %></h2>
-        <div class="button-group">
-            <%= button_to "Edit", edit_note_path(@note), method: :get, class: "button" %>
-            <%= button_to "Back", root_path, method: :get, class: "button" %>
-        </div>
-    </div>
-    <p><%= @note.body %></p>
+<div class="button-group">
+    <%= link_to "<< Notes", root_path %>
+    <%= button_to "Edit", edit_note_path(@note), method: :get, class: "button" %>
+</div>
 
+<div class="centered-content">
+  <div class="note-title">
+      <h1><%= @note.title %></h1>
+      <span><%= @note.created_at %></span>
+  </div>
+  <p><%= @note.body %></p>
 </div>
