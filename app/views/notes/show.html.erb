@@ -1,18 +1,14 @@
-<script>
-  <% if notice.present? %>
-    alert("<%= notice %>");
-  <% end %>
-</script>
+<p style="color: green"><%= notice %></p>
 
 <div class="button-group">
-  <%= link_to "<< Notes", root_path %>
-  <%= button_to "Edit", edit_note_path(@note), method: :get, class: "button" %>
+    <%= link_to "<< Notes", root_path %>
+    <%= button_to "Edit", edit_note_path(@note), method: :get, class: "button" %>
 </div>
 
 <div class="centered-content">
   <div class="note-title">
-    <h1><%= @note.title %></h1>
-    <span><%= @note.created_at %></span>
+      <h1><%= @note.title %></h1>
+      <span><%= @note.created_at %></span>
   </div>
   <p><%= @note.body %></p>
 </div>
