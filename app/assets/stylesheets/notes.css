@@ -37,11 +37,16 @@ hr {
   padding-bottom: 1rem;
 }
 
+.show-container,
 .button-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.show-container {
+  padding-bottom: 1rem;
 }
 
 .button-group .button {
