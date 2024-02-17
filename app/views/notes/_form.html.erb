@@ -1,0 +1,28 @@
+<%= form_with model: note do |form| %>
+    <% if form.object.errors.any? %>
+        <div>
+            <% form.object.errors.full_messages.each do |message| %>
+            <div style="color:red">
+                <%= message %>
+            </div>
+            <% end %>
+        </div>
+    <% end %>
+
+    <div class="textbox">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "text-field" %>
+    </div>
+
+    <div class="textbox">
+        <%= form.label :body %>
+        <%= form.text_area :body, class: "text-area" %>
+    </div>
+    
+    <div>
+        <%= form.button class: "button" %>
+    </div>
+<% end %>
+
+<%= button_to "Back", @note, method: :get, class: "button" %>
+

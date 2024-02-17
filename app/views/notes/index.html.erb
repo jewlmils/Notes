@@ -1,0 +1,18 @@
+<div class="index-container">
+    <div>
+        <h1>Notes</h1>
+    </div>
+    <div>
+         <%= button_to "New Note", new_note_path, method: :get, class: "button" %>
+    </div>
+</div>
+
+<p style="color: green"><%= notice %></p>
+
+<% @notes.each do |note| %>
+    <div class="notes-container">
+        <h2><%= link_to note.title, note, style: "text-decoration: none; color: black;" %></h2>
+        <p><%= note.body %></p>
+        <hr>
+    </div>
+<% end %>
